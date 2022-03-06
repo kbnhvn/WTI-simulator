@@ -16,13 +16,16 @@ const getTransactionDatasFromFile = (callback) => {
 }
 
 module.exports = class transactionData {
-    constructor(time, operation, price, amount, invest, value) {
+    constructor(time, operation, price, result, stopUp, stopDown, baseInvest, status) {
         this.time = time;
         this.operation = operation;
         this.price = price;
-        this.amount = amount;
-        this.invest = invest;
-        this.value = value;
+        this.result = result;
+        this.stopUp = stopUp;
+        this.stopDown = stopDown;
+        this.baseInvest = baseInvest;
+        this.status = status;
+
     }
 
     save() {
